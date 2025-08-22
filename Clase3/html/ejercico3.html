@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Tienda de Ropa Deportiva</title>
-   <link rel="stylesheet" href="../css/main.css">
+   <link rel="stylesheet" href="../css/main3.css">
 </head>
 <body>
    <header>
@@ -206,34 +206,13 @@
 </body>
 </html>
 
+<script src="../javascript/ejercicio3.js"></script>
+
 <script>
-    window.onload = function() {
-        //codigo a ejecutar cuando la pagina haya cargado
-        var imga1 = {
-            "src" : "../imgs/ropa1.jpg",
-            "alt" : "Imagen 1",
-            "width" : "300"
-        }
-
-        var imga2 = {
-            "src" : "../imgs/ropa1.jpg",
-            "alt" : "Imagen 1",
-            "width" : "300"
-        }
-
-        var imga3 = {
-            "src" : "../imgs/ropa1.jpg",
-            "alt" : "Imagen 1",
-            "width" : "300"
-        }
-        
-       var img1 = "<img src='" + imga1.src + "' alt='" + imga1.alt + "' width='" + imga1.width + "'>";
-       var img2 = "<img src='" + imga2.src + "' alt='" + imga2.alt + "' width='" + imga2.width + "'>";
-       var img3 = "<img src='" + imga3.src + "' alt='" + imga3.alt + "' width='" + imga3.width + "'>";
-       
-
-        document.getElementById("img1").innerHTML = img1;
-        document.getElementById("img2").innerHTML = img2;
-        document.getElementById("img3").innerHTML = img3;
+    window.onload = function () {
+        datosImagen.forEach(function(img) {
+            document.getElementById(img.id).innerHTML = crearImagen(img.src, img.alt, img.width);
+            
+        });
     };
 </script>
