@@ -209,10 +209,31 @@
 <script>
     window.onload = function() {
         //codigo a ejecutar cuando la pagina haya cargado
-        var img1 = '<img src="../img/ropa1.jpg" alt="Imagen 1" width="300">';
-        var img1 = '<img src="../img/ropa1.jpg" alt="Imagen 1" width="300">';
-        var img1 = '<img src="../img/ropa1.jpg" alt="Imagen 1" width="300">';
+        var imga1 = {
+            "src" : "../img/ropa1.jpg",
+            "alt" : "Imagen 1",
+            "width" : "300"
+        }
 
+        var imga2 = {
+            "src" : "../img/ropa1.jpg",
+            "alt" : "Imagen 1",
+            "width" : "300"
+        }
+
+        var imga3 = {
+            "src" : "../img/ropa1.jpg",
+            "alt" : "Imagen 1",
+            "width" : "300"
+        }
         
+        var img1 = '<img src=" + imga1.src + " alt=" + imga1.alt + " width=" + imga1.width + ">';
+        var img2 = '<img src=" + imga2.src + " alt=" + imga2.alt + " width=" + imga2.width + ">';
+        var img3 = '<img src=" + imga3.src + " alt=" + imga3.alt + " width=" + imga3.width + ">';
+       
+
+        document.getElementById("img1").innerHTML = img1;
+        document.getElementById("img2").innerHTML = img2;
+        document.getElementById("img3").innerHTML = img3;
     };
 </script>
