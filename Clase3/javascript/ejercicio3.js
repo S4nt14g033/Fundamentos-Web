@@ -1,7 +1,7 @@
 const datosImagen = [
-    {id:"img1", src:"../imgs/ropa1.jpg", alt:"ropa1", width:"300"},
-    {id:"img2", src:"../imgs/ropa1.jpg", alt:"ropa2", width:"300"},
-    {id:"img3", src:"../imgs/ropa1.jpg", alt:"ropa3", width:"300"}
+    {id:"img1", src:"../imgs/ropa_hombre.jpg", alt:"ropa_hombre", width:"300"},
+    {id:"img2", src:"../imgs/ropa_mujer.png", alt:"ropa_mujer", width:"300"},
+    {id:"img3", src:"../imgs/accesorios.png", alt:"accesorios", width:"300"}
 ];
 
 function crearImagen(src, alt,width) { 
