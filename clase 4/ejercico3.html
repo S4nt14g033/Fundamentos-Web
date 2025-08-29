@@ -4,7 +4,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Tienda de Ropa Deportiva</title>
-   <link rel="stylesheet" href="../css/main3.css">
+   <link rel="stylesheet" href="../clase 4/css/main3.css">
 </head>
 <body>
    <header>
@@ -69,25 +69,10 @@
        <section class="categorias-destacadas">
            <div class="container">
                <h2>Categorías Destacadas</h2>
-               <div class="grid-categorias">
-                   <article class="categoria">
-                        <h3>Ropa para Hombre</h3>
-                        <div id="img1"></div>
-                           
-                       <a href="hombres.html">Ver más</a>
-                   </article>
-                   <article class="categoria">
-                       <h3>Ropa para Mujeres</h3>
-                       <div id="img2"></div>
-                            
-                       <a href="mujeres.html">Ver más</a>
-                   </article>
-                   <article class="categoria">
-                       <h3>Accesorios</h3>
-                       <div id="img3"></div>
-                            
-                       <a href="accesorios.html">Ver más</a>
-                   </article>
+               <div class="grid-categorias" id="categorias">
+    
+                  
+                  
                </div>
            </div>
        </section>
@@ -208,4 +193,15 @@
    </footer>
 </body>
 </html>
+
+<script src="../clase 4/javascript/ejercicio3.js"></script>
+
+<script>
+    window.onload = function() {
+        const contenedor = document.getElementById("categorias");
+            categorias.forEach(cat => {
+	        contenedor.innerHTML += crearArticulo(cat);
+});
+    }
+</script>
 

@@ -1,13 +1,37 @@
-const datosImagen = [
-    {id:"img1", src:"../imgs/ropa_hombre.jpg", alt:"ropa_hombre", width:"300"},
-    {id:"img2", src:"../imgs/ropa_mujer.png", alt:"ropa_mujer", width:"300"},
-    {id:"img3", src:"../imgs/accesorios.png", alt:"accesorios", width:"300", width:"230"},
-    {id:"img4", src:"../imgs/pack_Tarjetas.png", alt:"pack_tarjetas", width:"150"},
-    {id:"img5", src:"../imgs/leggins.png", alt:"leggings_yoga", width:"150"},
-    {id:"img6", src:"../imgs/zapatillas.png", alt:"zapatillas_running", width:"150"},
-    {id:"img7", src:"../imgs/shorts.png", alt:"shorts.png", width:"150"}
+const categorias = [
+	{
+		titulo: 'Ropa para Hombre',
+		imgAlt: 'Ropa para Hombre',
+		link: 'hombres.html',
+		linkText: 'Ver más',
+        img : './imgs/ropa_hombre.jpg'
+	},
+	{
+		titulo: 'Ropa para Mujeres',
+		imgAlt: 'Ropa para Mujeres',
+		link: 'mujeres.html',
+		linkText: 'Ver más',
+        img : './imgs/ropa_mujer.png'
+	},
+	{
+		titulo: 'Accesorios',
+		imgAlt: 'Accesorios',
+		link: 'accesorios.html',
+		linkText: 'Ver más',
+        img : './imgs/accesorios.png'
+
+	}
 ];
 
-function crearImagen(src, alt,width) { 
-    return `<img src="${src}" alt="${alt}" width="${width}">`;
+function crearArticulo(categoria) {
+	return `
+		<article class="categoria">
+			<h3>${categoria.titulo}</h3>
+			<div class="img-categoria">
+				<img src="${categoria.img}" alt="${categoria.imgAlt}" width="${categoria.imgWidth || 200}">
+			</div>
+			<a href="${categoria.link}">${categoria.linkText}</a>
+		</article>
+	`;
 }
+
