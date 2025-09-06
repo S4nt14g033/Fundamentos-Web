@@ -1,0 +1,65 @@
+.container{
+    border: solid black 2px;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.encabezado{
+    background-color: lightblue;
+    border-radius: 10px;
+    height: 100px;
+    margin: 10px 5px;    
+}
+
+.miniEnca{
+    background-color: lightgreen;
+    border-radius: 10px;
+    height: 45px;
+    margin: 10px 5px;    
+}
+
+.contenido{
+    display: flex;
+    flex-direction: column-reverse;
+    height: 500px;
+    margin: 10px 5px;
+   
+    
+    
+}
+.principal{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.cuerpo{
+    background-color: lightcoral;
+    border-radius: 10px;
+    height: 500px;
+    margin-right: 10px;
+    width: 600px;
+}
+
+.section{
+    background-color: rgb(114, 221, 240);
+    border-radius: 10px;
+    height: 150px;
+    margin: 20px 10px;
+    width: 550px;
+}
+
+.lateralIzq{
+    background-color: rgb(186, 184, 108);
+    border-radius: 10px;
+    height: 500px;
+    width: 200px;
+    
+}
+
+.piepagina{
+    background-color: lightgrey;
+    border-radius: 10px;
+    height: 100px;
+    margin: 10px 5px;
+}
