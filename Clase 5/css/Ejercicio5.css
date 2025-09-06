@@ -1,0 +1,69 @@
+.contenedor{
+    border: solid black 2px;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.encabezado{
+   background-color:lightblue;
+   border-radius: 10px;
+   height: 100px;
+   margin: 10px 5px;
+   display:flex;
+
+}
+.titulo{
+    background-color: lightgreen;
+    border-radius: 10px;
+    margin-right: 5px;   
+    height: 45px;
+}
+
+.links{
+ margin-left:10px;
+}
+
+.buscador{
+
+}
+
+.contenido{
+
+}
+
+.banner{
+
+}
+
+.lateralIzq{
+
+}
+
+.sect1{
+
+}
+
+.sect2{
+
+}
+
+.sect3{
+
+}
+
+.cuerpo{
+
+}
+
+.lateralDer{
+
+}
+
+.piepagina{
+
+}
+
+.info{
+
+}
