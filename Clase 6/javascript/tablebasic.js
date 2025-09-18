@@ -41,7 +41,7 @@ const basicTableBodyData = [
 
 const customTableBodyData = [
     {avatar: "./dashboard_base/images/avatar/1.jpg", id: "#5469", name: "Louis Stanley", product: "iMax", count: 231, status: "Complete"},
-    {avatar: "./dashboard_base/images/avatar/2.jpg", id: "#5468", name: "Gregory Dixon", product: "iPad", count: 250, status: "Complete"},
+    {avatar: "./dashboard_base/images/avatar/2.jpg", id: "#5468", name: "Gregory Dixon", product: "iPad", count: 250, status: "Pending"},
     {avatar: "./dashboard_base/images/avatar/3.jpg", id: "#5467", name: "Catherine Dixon", product: "SSD", count: 250, status: "Complete"},
     {avatar: "./dashboard_base/images/avatar/4.jpg", id: "#5466", name: "Mary Silva", product: "Magic Mouse", count: 250, status: "Pending"},
     {avatar: "./dashboard_base/images/avatar/5.jpg", id: "#5465", name: "Kathryn Murphy", product: "iPhone 6s", count: 250, status: "Complete"},
