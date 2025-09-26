@@ -1,0 +1,112 @@
+/* General */
+body {
+   margin: 0;
+   padding: 0;
+   font-family: Arial, sans-serif;
+   background-color: #504f4f;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+/* Container */
+.container {
+   text-align: center;
+}
+/* Logo */
+.logo {
+   font-size: 36px;
+   margin-bottom: 20px;
+   color: #fff;
+}
+.logo-e {
+   color: #2cc6d1; /* Verde */
+   font-weight: bold;
+}
+.logo-admin {
+   color: #1732a8; /* Verde más fuerte */
+   font-weight: bold;
+}
+
+.logo-admin2 {
+   color: #03fff2; /* Rosa */
+   font-weight: bold;
+}
+/* Form Box */
+.form-box {
+   background: #fff;
+   padding: 30px;
+   border-radius: 8px;
+   width: 350px;
+   text-align: left;
+}
+/* Labels */
+label {
+   display: block;
+   margin: 10px 0 5px;
+   font-size: 14px;
+   color: #333;
+}
+/* Inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+   width: 100%;
+   padding: 10px;
+   margin-bottom: 15px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+}
+/* Terms */
+.terms {
+   margin-bottom: 15px;
+   font-size: 13px;
+   display: flex;
+   align-items: center;
+   gap: 8px;
+}
+/* Buttons */
+.button {
+   width: 100%;
+   padding: 12px;
+   margin-bottom: 10px;
+   border: none;
+   border-radius: 5px;
+   font-size: 15px;
+   cursor: pointer;
+   color: #fff;
+}
+/* Botón de registro principal */
+.btn-register {
+   background-color: #785afd;
+}
+/* Botón de Facebook */
+.btn-facebook {
+   background-color: #002980;
+}
+/* Botón de Twitter */
+.btn-twitter {
+   background-color: #2da8f5;
+}
+
+/* Efecto hover para todos los botones */
+.button:hover {
+   opacity: 0.85;
+   transform: scale(1.03);
+   transition: all 0.2s;
+}
+
+/* Separación entre botones para evitar que se vean pegados */
+.button {
+   margin-bottom: 12px;
+}
+/* Sign in text */
+.signin-text {
+   margin-top: 15px;
+   text-align: center;
+   font-size: 14px;
+}
+.signin-text a {
+   color: salmon;
+   text-decoration: none;
+}
