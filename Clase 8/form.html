@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+    <!-- Enlace a la hoja de estilos principal -->
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <!-- Contenedor principal del formulario -->
+    <div class="form-container">
+        <h1>Formulario Completo de Registro</h1>
+        <!-- Inicio del formulario -->
+        <form action="#" method="post">
+    <div class="form-container">
+        <h1>Formulario Completo de Registro</h1>
+        <form action="#" method="post">
+
+            <!-- Información Personal: Sección para datos básicos del usuario -->
+            <div class="form-row">
+                <div class="form-group">
+                    <!-- Campo para ingresar el nombre del usuario -->
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <!-- Campo para ingresar el apellido del usuario -->
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <!-- Campo para ingresar el correo electrónico -->
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <!-- Campo para ingresar el número de teléfono -->
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono">
+                </div>
+                <div class="form-group">
+                    <!-- Campo para seleccionar la fecha de nacimiento -->
+                    <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+                </div>
+            </div>
+
+
+            <!-- Sección: Contraseña -->
+            <div class="form-row">
+                <div class="form-group">
+                    <!-- Campo para ingresar la contraseña -->
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <!-- Campo para confirmar la contraseña -->
+                    <label for="confirm_password">Confirmar Contraseña:</label>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
+                </div>
+            </div>
+
+            <!-- Sección: Información Adicional -->
+            <div class="form-group">
+                <!-- Campo para ingresar la edad -->
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" min="1" max="120">
+            </div>
+
+            <div class="form-group">
+                <!-- Campo para ingresar el sitio web personal -->
+                <label for="sitio_web">Sitio Web:</label>
+                <input type="url" id="sitio_web" name="sitio_web" placeholder="https://ejemplo.com">
+            </div>
+
+            <div class="form-group">
+                <!-- Campo para seleccionar el color favorito -->
+                <label for="color_favorito">Color Favorito:</label>
+                <input type="color" id="color_favorito" name="color_favorito">
+            </div>
+
+            <!-- Sección: Fechas y horarios -->
+            <div class="form-row">
+                <div class="form-group">
+                    <!-- Campo tipo rango para seleccionar años de experiencia -->
+                    <label for="rango_experiencia">Años de Experiencia (0-50):</label>
+                    <input type="range" id="rango_experiencia" name="rango_experiencia" min="0" max="50" value="5">
+                    <output for="rango_experiencia">5</output>
+                </div>
+                <div class="form-group">
+                    <!-- Campo para seleccionar la hora preferida de contacto -->
+                    <label for="hora_contacto">Hora Preferida de Contacto:</label>
+                    <input type="time" id="hora_contacto" name="hora_contacto">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <!-- Campo para seleccionar fecha y hora de inicio -->
+                    <label for="fecha_inicio">Fecha de Inicio:</label>
+                    <input type="datetime-local" id="fecha_inicio" name="fecha_inicio">
+                </div>
+                <div class="form-group">
+                    <!-- Campo para seleccionar la semana del año -->
+                    <label for="semana">Semana del Año:</label>
+                    <input type="week" id="semana" name="semana">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <!-- Campo para seleccionar el mes -->
+                <label for="mes">Mes:</label>
+                <input type="month" id="mes" name="mes">
+            </div>
+
+            <!-- Sección: Selecciones -->
+            <div class="form-group">
+                <!-- Selección de país -->
+                <label for="pais">País:</label>
+                <select id="pais" name="pais" required>
+                    <option value="">Seleccionar país</option>
+                    <option value="argentina">Argentina</option>
+                    <option value="brasil">Brasil</option>
+                    <option value="chile">Chile</option>
+                    <option value="colombia">Colombia</option>
+                    <option value="ecuador">Ecuador</option>
+                    <option value="mexico">México</option>
+                    <option value="peru">Perú</option>
+                    <option value="venezuela">Venezuela</option>
+                    <option value="otro">Otro</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <!-- Selección múltiple de habilidades técnicas -->
+                <label for="habilidades">Habilidades (múltiple selección):</label>
+                <select id="habilidades" name="habilidades" multiple size="5">
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="php">PHP</option>
+                    <option value="react">React</option>
+                    <option value="nodejs">Node.js</option>
+                </select>
+            </div>
+
+            <!-- Sección: Género (Radio Buttons) -->
+            <div class="form-group">
+                <label>Género:</label>
+                <div class="radio-group">
+                    <div class="radio-item">
+                        <!-- Opción masculino -->
+                        <input type="radio" id="masculino" name="genero" value="masculino">
+                        <label for="masculino">Masculino</label>
+                    </div>
+                    <div class="radio-item">
+                        <!-- Opción femenino -->
+                        <input type="radio" id="femenino" name="genero" value="femenino">
+                        <label for="femenino">Femenino</label>
+                    </div>
+                    <div class="radio-item">
+                        <!-- Opción otro género -->
+                        <input type="radio" id="otro_genero" name="genero" value="otro">
+                        <label for="otro_genero">Otro</label>
+                    </div>
+                    <div class="radio-item">
+                        <input type="radio" id="no_especificar" name="genero" value="no_especificar">
+                        <label for="no_especificar">Prefiero no especificar</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección: Intereses (Checkboxes) -->
+            <div class="form-group">
+                <label>Intereses:</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <!-- Opción deportes -->
+                        <input type="checkbox" id="deportes" name="intereses" value="deportes">
+                        <label for="deportes">Deportes</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <!-- Opción música -->
+                        <input type="checkbox" id="musica" name="intereses" value="musica">
+                        <label for="musica">Música</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <!-- Opción lectura -->
+                        <input type="checkbox" id="lectura" name="intereses" value="lectura">
+                        <label for="lectura">Lectura</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <!-- Opción viajes -->
+                        <input type="checkbox" id="viajes" name="intereses" value="viajes">
+                        <label for="viajes">Viajes</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <!-- Opción tecnología -->
+                        <input type="checkbox" id="tecnologia" name="intereses" value="tecnologia">
+                        <label for="tecnologia">Tecnología</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <!-- Opción cocina -->
+                        <input type="checkbox" id="cocina" name="intereses" value="cocina">
+                        <label for="cocina">Cocina</label>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Sección: Áreas de texto -->
+            <div class="form-group">
+                <!-- Campo para escribir una biografía -->
+                <label for="biografia">Biografía:</label>
+                <textarea id="biografia" name="biografia" placeholder="Cuéntanos sobre ti..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <!-- Campo para comentarios adicionales -->
+                <label for="comentarios">Comentarios Adicionales:</label>
+                <textarea id="comentarios" name="comentarios" placeholder="Cualquier información adicional que quieras compartir..."></textarea>
+            </div>
+
+            <!-- Sección: Subida de archivos -->
+            <div class="form-group">
+                <!-- Campo para subir CV o documento -->
+                <label for="archivo">Subir CV o Documento:</label>
+                <input type="file" id="archivo" name="archivo" accept=".pdf,.doc,.docx">
+            </div>
+
+            <div class="form-group">
+                <!-- Campo para subir imágenes múltiples -->
+                <label for="imagenes">Subir Imágenes (múltiples):</label>
+                <input type="file" id="imagenes" name="imagenes" accept="image/*" multiple>
+            </div>
+
+            <!-- Campos ocultos para versión y timestamp -->
+            <input type="hidden" name="formulario_version" value="1.0">
+            <input type="hidden" name="timestamp" value="">
+
+            <!-- Sección: Términos y condiciones -->
+            <div class="form-group">
+                <div class="checkbox-item">
+                    <!-- Checkbox para aceptar términos y condiciones -->
+                    <input type="checkbox" id="terminos" name="terminos" required>
+                    <label for="terminos">Acepto los términos y condiciones</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="checkbox-item">
+                    <!-- Checkbox para suscribirse al newsletter -->
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Deseo recibir el newsletter</label>
+                </div>
+            </div>
+
+            <!-- Botón para enviar el formulario -->
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Enviar Formulario</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Script para funcionalidades del formulario -->
+    <script>
+        // Actualiza el valor del campo rango de experiencia en tiempo real
+        const rangeInput = document.getElementById('rango_experiencia');
+        const output = document.querySelector('output[for="rango_experiencia"]');
+        rangeInput.addEventListener('input', function() {
+            output.textContent = this.value;
+        });
+
+        // Establece el timestamp actual en el campo oculto
+        document.querySelector('input[name="timestamp"]').value = new Date().toISOString();
+
+        // Validación para que las contraseñas coincidan
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirm_password');
+        function validatePasswords() {
+            if (password.value !== confirmPassword.value) {
+                confirmPassword.setCustomValidity('Las contraseñas no coinciden');
+            } else {
+                confirmPassword.setCustomValidity('');
+            }
+        }
+        password.addEventListener('change', validatePasswords);
+        confirmPassword.addEventListener('keyup', validatePasswords);
+    </script>
+</body>
+</html>
