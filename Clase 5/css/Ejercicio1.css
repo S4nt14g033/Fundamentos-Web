@@ -1,0 +1,45 @@
+.container{
+    border: solid black 2px;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.encabezado{
+    background-color: lightblue;
+    border-radius: 10px;
+    height: 100px;
+    margin: 10px 5px;
+}
+
+.contenido{
+    height: 500px;
+    margin: 10px 5px;
+    display: flex;
+}
+
+.cuerpo{
+    background-color: lightcoral;
+    border-radius: 10px;
+    height: 450px;
+    margin-right: 10px;
+    width: 600px;
+    
+}
+
+
+
+.lateralIzq{
+    background-color: lightgoldenrodyellow;
+    border-radius: 10px;
+    height: 450px;
+    width: 200px;
+    
+}
+
+.piepagina{
+    background-color: lightgreen;
+    border-radius: 10px;
+    height: 200px;
+    margin: 10px 5px;
+}

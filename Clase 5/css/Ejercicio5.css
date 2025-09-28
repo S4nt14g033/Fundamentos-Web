@@ -1,0 +1,142 @@
+.contenedor{
+    border: solid black 2px;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.encabezado{
+   background-color:lightblue;
+   border-radius: 10px;
+   display: flex;
+   flex-direction:row;
+   align-items: center;
+   justify-content: space-between;
+   
+
+}
+.titulo{
+    background-color: lightgreen;
+    border-radius: 10px;
+    margin-right: 5px;   
+    height: 45px;
+    width: 300px;
+    padding: 10px;
+    display: flex;
+}
+
+.grupo-links{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap:10px;
+}
+
+.links{
+    background-color: rgb(34, 139, 34);
+    margin-left: 5px;
+    border-radius: 10px;
+    height: 25px;
+    width: 800px;
+    
+
+}
+
+.buscador{
+    background-color: green;
+    margin-left: 5px;
+    border-radius: 10px;
+    height: 15px;
+    width: 500px;
+}
+
+.contenido{
+    background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.banner{
+    background-color: lightcoral;
+    border-radius: 5px;
+    height: 200px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.lateralIzq{
+    background-color: lightsalmon;
+    border-radius: 10px;
+    height: 500px;
+    width: 300px;
+    margin-left: 5px;
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    gap:10px;
+    
+}
+   
+
+.sect1{
+    background-color: rgb(214, 211, 230);
+    border-radius: 10px;
+    height: 150px;
+    width: 250px;
+    margin-top:20px;
+}
+
+.sect2{
+    background-color: rgb(194, 210, 193);
+    border-radius: 10px;
+    height: 150px;
+    width: 250px;
+}
+
+.sect3{
+    background-color:antiquewhite;
+    border-radius: 10px;
+    height: 400px;
+    width: 250px;
+    margin-bottom:20px;
+    
+}
+
+.cuerpo{
+    background-color: rgb(203, 190, 220);
+    border-radius: 10px;
+    height: 500px;
+    width: 1200px;
+    
+}
+
+.lateralDer{
+    background-color: lightskyblue;
+    border-radius: 10px;
+    height: 500px;
+    width: 300px;
+    margin-right: 5px;
+}
+
+
+.piepagina{
+    background-color:rgb(46, 46, 46);
+    border-radius: 10px;
+    height: 100px;
+    width: 100%;
+    margin-top: 10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    
+}
+
+.info{
+    background-color: rgb(47, 93, 99);
+    border-radius: 10px;
+    height: 80px;
+    width: 300px;
+    
+}
