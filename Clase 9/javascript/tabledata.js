@@ -4,12 +4,17 @@ async function loadTableData() {
     const tableBodyData = await obtenerDatos();
 
     tableBodyData.forEach(data => {
+      const url_formUsuario = 'form_usuarios.html?id=' + data.id;
         const row = document.createElement("tr");
         row.innerHTML = `
             <td>${data.id}</td>
             <td>${data.name}</td>
             <td>${data.email}</td>
             <td>${data.username}</td>
+            <td>
+                <a href="${url_formUsuario}" class="btn btn-primary">Edit</a>
+                <a href="#" class="btn btn-danger">Delete</a>
+            </td>
         `;
         tableBody.appendChild(row);
     })
