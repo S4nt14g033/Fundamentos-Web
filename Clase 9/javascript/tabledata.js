@@ -10,7 +10,7 @@ const tableBodyData = [
     "number": 6454,
     "zipcode": "98234-1734"
   },
-  "id": 4,
+  "id": 33,
   "email": "Santiago@gmail.com",
   "username": "donero",
   "password": "ewedon",
@@ -39,4 +39,21 @@ function loadTableData() {
     })
 }
 
-                                       
+async function obtenerDatos() {
+  try {
+    // 1. Define la URL del endpoint de la API
+    const url = 'https://jsonplaceholder.typicode.com/users'; // Ejemplo de URL
+
+    // 2. Realiza la petición GET usando fetch
+    const respuesta = await fetch(url);
+
+    // 3. Convierte la respuesta a formato JSON
+    const datos = await respuesta.json();
+
+    // 4. Utiliza los datos
+    console.log(datos); // Muestra los datos en la consola
+    // Aquí podrías actualizar la interfaz de usuario, por ejemplo
+  } catch (error) {
+    console.error('Error al consumir la API:', error);
+  }
+}                              
