@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/front.css">
-    <title>form usuarios</title>
+    <title>Document</title>
 </head>
 
 <body>
@@ -13,26 +13,40 @@
     
     
         <div class="form-container">
-            <h1>Formulario de Registro</h1>
+            <h1>Formulario de Productos</h1>
             <form action=""></form>
                 <div class="form-row">
                     <div class="form-group">
-                      <label for="nombre">Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" required>
+                      <label for="nombre">Title</label>
+                        <input type="text" id="title" name="title" required>
                     </div>
                 </div>
 
             <div class="form-row">
                 <div class="form-group">
-                    <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" required>
+                    <label for="email">Price</label>
+                    <input type="number" id="email" name="email" required>
                 </div>  
             </div>
 
             <div class="form-row">
                 <div class="form-group">
-                    <label for="Username">Username</label>
+                    <label for="Username">Description</label>
                     <input type="text" id="username" name="username" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <input type="text" id="category" name="category" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="image">Image</label>
+                    <input type="image" id="image" name="image" required>
                 </div>
             </div>
 
@@ -106,7 +120,7 @@ $('form').on('submit', function(e) {
 async function getUsuario(id) {
   try {
     // 1. Define la URL del endpoint de la API
-    const url = 'https://jsonplaceholder.typicode.com/users/' + id; // Ejemplo de URL
+    const url = 'https://fakestoreapi.com/products' + id; // Ejemplo de URL
 
     // 2. Realiza la petición GET usando fetch
     const respuesta = await fetch(url);
