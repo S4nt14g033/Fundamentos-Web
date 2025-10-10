@@ -4,15 +4,15 @@ async function loadTableData() {
     const tableBodyData = await obtenerDatos();
 
     tableBodyData.forEach(data => {
-      const url_formUsuario = 'form_usuarios.html?id=' + data.id;
+      const url_formProdu = 'form_Productos.html?id=' + data.id;
         const row = document.createElement("tr");
         row.innerHTML = `
             <td>${data.id}</td>
-            <td>${data.name}</td>
-            <td>${data.email}</td>
-            <td>${data.username}</td>
+            <td>${data.title}</td>
+            <td>${data.category}</td>
+            
             <td>
-                <a href="${url_formUsuario}" class="btn btn-primary">Edit</a>
+                <a href="${url_formProdu}" class="btn btn-primary">Edit</a>
                 <a href="#" class="btn btn-danger">Delete</a>
             </td>
         `;
@@ -23,7 +23,7 @@ async function loadTableData() {
 async function obtenerDatos() {
   try {
     // 1. Define la URL del endpoint de la API
-    const url = 'https://jsonplaceholder.typicode.com/users'; // Ejemplo de URL
+    const url = 'https://fakestoreapi.com/products'; // Ejemplo de URL
 
     // 2. Realiza la petición GET usando fetch
     const respuesta = await fetch(url);

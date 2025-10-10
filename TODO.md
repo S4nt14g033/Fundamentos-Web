@@ -1,0 +1,4 @@
+- [x] Change image input type from "image" to "url" in form_Productos.html
+- [x] Add <img> tag for image preview in form_Productos.html
+- [x] Update JS in form_Productos.html to set img src on load and on input change
+- [x] Test the form by opening in browser
