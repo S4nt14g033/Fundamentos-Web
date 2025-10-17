@@ -13,7 +13,7 @@ async function loadTableData() {
             <td>${data.username}</td>
             <td>
                 <a href="${url_formUsuario}" class="btn btn-primary">Edit</a>
-                <a href="#" class="btn btn-danger">Delete</a>
+                <a href="javascript:deleteUser(${data.id})" class="btn btn-danger">Delete</a>
             </td>
         `;
         tableBody.appendChild(row);
@@ -38,4 +38,20 @@ async function obtenerDatos() {
   } catch (error) {
     console.error('Error al consumir la API:', error);
   }
-}                              
+}
+
+async function deleteUser(id){
+    try{
+        const url = 'https://jsonplaceholder.typicode.com/users/'+id;
+
+        const respuesta = await fetch(url, {
+            method: "DELETE"
+        });
+
+        const datos = await respuesta.json();
+        alert("registro borrado");
+    } catch (error) {
+        console.error('Error al consumir la API:', error);
+        return null;
+    }
+}

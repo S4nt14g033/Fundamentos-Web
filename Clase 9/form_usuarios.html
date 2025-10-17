@@ -14,32 +14,34 @@
     
         <div class="form-container">
             <h1>Formulario de Registro</h1>
-            <form action=""></form>
+            <form action="">
                 <div class="form-row">
+                    <input type="hidden" id="id">
                     <div class="form-group">
                       <label for="nombre">Nombre:</label>
                         <input type="text" id="nombre" name="nombre" required>
                     </div>
                 </div>
 
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="email">Correo Electrónico:</label>
-                    <input type="email" id="email" name="email" disabled>
-                </div>  
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="Username">Username</label>
-                    <input type="text" id="username" name="username" disabled>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" disabled>
+                    </div>  
                 </div>
-            </div>
 
-            <!-- Botón de envío -->
-            <div class="form-group">
-                <button type="submit" class="submit-btn" disabled>Enviar Formulario</button>
-            </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="Username">Username</label>
+                        <input type="text" id="username" name="username" disabled>
+                    </div>
+                </div>
+
+                <!-- Botón de envío -->
+                <div class="form-group">
+                    <button type="submit" class="submit-btn" id="enviar" disabled>Enviar Formulario</button>
+                </div>
+            </form>
         </div>
     </form>
 
@@ -55,10 +57,11 @@
         $('#username').val(usuario.username);
         $('#nombre').val(usuario.name);
         $('#email').val(usuario.email);
-        
+        $('#id').val(usuario.id);
+
 
         window.__originalUsuario = usuario;
-        sessionStorage.setItem('usr_${usuario.id}_original', JSON.stringify(usuario));
+        sessionStorage.setItem(`usr_${usuario.id}_original`, JSON.stringify(usuario));
     }
 
     //habilitar el boton de enviar
@@ -75,17 +78,28 @@
     password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9\s]).{8,}$/,
 };
 
-$('form').on('submit', function(e) {
+$('form').on('submit', async function(e) {
     e.preventDefault();
 
     const nombre   = $('#nombre').val();
+    const id       = $('#id').val();
 
     if (nombre && !regex.nombre.test(nombre.trim())) {
         alert("El nombre no es válido. Debe tener entre 2 y 60 carateres");
         return;
     }
+
+    const original =
+            window.__originalUsuario ||
+            JSON.parse(sessionStorage.getItem(`usr_${id}_original`) || '{}');
+        original.name = nombre;
+
+    const result = await patchUser(original);
     
-    alert("Actializacion realizada");
+    
+    alert("Actualización realizada");
+
+    window.location.href = 'tables-data personas.html';
     
 
     
@@ -110,7 +124,25 @@ async function getUsuario(id) {
   } catch (error) {
     console.error('Error al consumir la API:', error);
   }
-}                              
+}
+
+async function patchUser(original){
+    try{
+        const url = 'https://jsonplaceholder.typicode.com/users/'+original.id;
+
+        const respuesta = await fetch(url, {
+            method: "PATCH",
+            body: JSON.stringify(original)
+
+        });
+
+        const datos = await respuesta.json();
+        return datos;
+    } catch (error) {
+        console.error('Error al consumir la API:', error);
+        return null;
+    }
+}
 
 </script>
 </html>
