@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/front.css">
+    <title>form Instructores</title>
+</head>
+
+<body>
+
+    
+    
+        <div class="form-container">
+            <h1>Formulario de Registro</h1>
+            <form action="">
+                <div class="form-row">
+                    <input type="hidden" id="ID">
+                    <div class="form-group">
+                      <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="dept_name">Departamento</label>
+                        <input type="text" id="dept_name" name="dept_name" disabled>
+                    </div>  
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="salary">Salario</label>
+                        <input type="number" id="salary" name="salary" disabled>
+                    </div>
+                </div>
+
+                <!-- Botón de envío -->
+                <div class="form-group">
+                    <button type="submit" class="submit-btn" id="enviar" disabled>Enviar Formulario</button>
+                </div>
+            </form>
+        </div>
+    </form>
+
+
+
+</body>
+<script src="./javascript/jquery.js"></script>
+
+<script>
+    window.onload = async function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const usuario = await getUsuario(urlParams.get('id'));
+        $('#ID').val(usuario.ID);
+        $('#name').val(usuario.name);
+        $('#dept_name').val(usuario.dept_name);
+        $('#salary').val(usuario.salary);
+        
+
+
+        window.__originalUsuario = usuario;
+        sessionStorage.setItem(`usr_${usuario.id}_original`, JSON.stringify(usuario));
+    }
+    
+
+    //habilitar el boton de enviar
+    const campoNombre = document.getElementById("name");
+
+    campoNombre.addEventListener("change", function() {
+        document.getElementById("enviar").disabled = false;
+    });
+
+    const regex = {
+    name: /^[A-Za-zÀ-ÿ'´`¨^.\-\s]{2,60}$/,
+    
+};
+
+$('form').on('submit', async function(e) {
+    e.preventDefault();
+
+    const name   = $('#name').val();
+    const ID       = $('#ID').val();
+
+    if (nombre && !regex.name.test(name.trim())) {
+        alert("El nombre no es válido. Debe tener entre 2 y 60 carateres");
+        return;
+    }
+
+    const original =
+            window.__originalUsuario ||
+            JSON.parse(sessionStorage.getItem(`usr_${ID}_original`) || '{}');
+        original.name = name;
+
+    const result = await patchUser(original);
+    
+    
+    alert("Actualización realizada");
+
+    window.location.href = 'tables-data personas.html';
+    
+
+    
+    
+});
+
+async function getUsuario(id) {
+  try {
+    // 1. Define la URL del endpoint de la API
+    const url = 'http://localhost:3000/api/instructors/' + id; // Ejemplo de URL
+
+    // 2. Realiza la petición GET usando fetch
+    const respuesta = await fetch(url);
+
+    // 3. Convierte la respuesta a formato JSON
+    const datos = await respuesta.json();
+
+    // 4. Utiliza los datos
+    console.log(datos); // Muestra los datos en la consola
+    return datos; //devuelve los datos para usarlos en loadTableData
+    // Aquí podrías actualizar la interfaz de usuario, por ejemplo
+  } catch (error) {
+    console.error('Error al consumir la API:', error);
+  }
+}
+
+async function patchUser(original){
+    try{
+        const url = 'https://jsonplaceholder.typicode.com/users/'+original.id;
+
+        const respuesta = await fetch(url, {
+            method: "PATCH",
+            body: JSON.stringify(original)
+
+        });
+
+        const datos = await respuesta.json();
+        return datos;
+    } catch (error) {
+        console.error('Error al consumir la API:', error);
+        return null;
+    }
+}
+
+</script>
+</html>
